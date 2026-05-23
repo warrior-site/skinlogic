@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--text-dark)' }}>
+    <footer style={{ background: 'var(--text-dark)', paddingTop:"1rem" }}>
       <div className="mx-auto px-6 py-10" style={{ maxWidth: '1200px' }}>
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-2">
               {['oily-skin', 'acne', 'pigmentation', 'hair-fall', 'dark-circles', 'dry-skin'].map(slug => (
-                <Link key={slug} href={`/problem/${slug}`} className="text-sm capitalize transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <Link key={slug} href={`/${slug}`} className="text-sm capitalize transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>
                   {slug.replace(/-/g, ' ')}
                 </Link>
               ))}
@@ -38,10 +38,10 @@ export default function Footer() {
               Connect
             </div>
             <div className="flex flex-col gap-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              <a href="https://www.instagram.com/skinlogic.anshika?igsh=bjc1ems1YTliaTl0" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>
                 Instagram
               </a>
-              <a href="https://quora.com" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              <a href="https://www.quora.com/profile/Skinlogic-anshika?ch=3&oid=3196092666&share=c90fd94a&srid=5DSDfL&target_type=user" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>
                 Quora
               </a>
               <Link href="/research" className="text-sm transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.5)' }}>

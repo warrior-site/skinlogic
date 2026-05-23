@@ -19,12 +19,12 @@ export default function Navbar() {
         style={{ maxWidth: '1200px' }}
       >
         {/* Logo */}
-        <Link href="/" className="font-display mr-auto shrink-0 text-lg font-semibold" style={{ color: 'var(--sage)', letterSpacing: '-0.5px' }}>
+        <div style={{display:"flex", justifyContent:"space-between", width:"100%"}}>
+           <Link href="/" className="font-display mr-auto shrink-0 text-lg font-semibold" style={{ color: 'var(--sage)', letterSpacing: '-0.5px' }}>
           Skin<span style={{ color: 'var(--coral)', fontStyle: 'italic',fontSize:"1.25rem" }}>Logic</span>
         </Link>
-
-        {/* Search */}
-        <SearchBar />
+         <div>
+           <SearchBar />
 
         {/* Nav links */}
         <div className="hidden items-center gap-5 md:flex">
@@ -38,6 +38,10 @@ export default function Navbar() {
             Research
           </Link>
         </div>
+         </div>
+        </div>
+       
+       
       </div>
     </nav>
   )

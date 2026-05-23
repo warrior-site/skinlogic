@@ -100,3 +100,6 @@ body {
   background: var(--sage-light);
   color: var(--sage-dark);
 }
+input {
+  outline: none;
+}

@@ -1,4 +1,6 @@
 export interface Product {
+  variants:string
+  _id?: string
   id: string
   problem: string
   productName: string

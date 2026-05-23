@@ -5,41 +5,41 @@ import ProductCard from '@/components/ProductCard'
 
 const BADGE_STYLE: Record<string, { bg: string; color: string }> = {
   coral: { bg: 'var(--coral-light)', color: 'var(--coral)' },
-  sage:  { bg: 'var(--sage-light)',  color: 'var(--sage)'  },
-  gold:  { bg: 'var(--gold-light)',  color: 'var(--gold)'  },
+  sage: { bg: 'var(--sage-light)', color: 'var(--sage)' },
+  gold: { bg: 'var(--gold-light)', color: 'var(--gold)' },
 }
 
 const SOCIAL_LINKS = [
   {
-    href:  'https://instagram.com',
+    href: 'https://www.instagram.com/skinlogic.anshika?igsh=bjc1ems1YTliaTl0',
     label: 'Instagram',
-    sub:   'Daily skincare tips',
-    icon:  '📸',
-    bg:    'rgba(196,97,74,0.15)',
+    sub: 'Daily skincare tips',
+    icon: '📸',
+    bg: 'rgba(196,97,74,0.15)',
     color: '#e8826a',
   },
   {
-    href:  'https://quora.com',
+    href: 'https://www.quora.com/profile/Skinlogic-anshika?ch=3&oid=3196092666&share=c90fd94a&srid=5DSDfL&target_type=user',
     label: 'Quora',
-    sub:   'Answering your questions',
-    icon:  '💬',
-    bg:    'rgba(192,57,43,0.15)',
+    sub: 'Answering your questions',
+    icon: '💬',
+    bg: 'rgba(192,57,43,0.15)',
     color: '#e07060',
   },
   {
-    href:  'https://pinterest.com',
+    href: 'https://pin.it/7n7Cocm8I',
     label: 'Pinterest',
-    sub:   'Visual skincare guides',
-    icon:  '📌',
-    bg:    'rgba(230,0,35,0.15)',
+    sub: 'Visual skincare guides',
+    icon: '📌',
+    bg: 'rgba(230,0,35,0.15)',
     color: '#ff6680',
   },
   {
-    href:  'https://t.me',
+    href: 'https://t.me',
     label: 'Telegram',
-    sub:   'Join our skin community',
-    icon:  '✈️',
-    bg:    'rgba(0,136,204,0.15)',
+    sub: 'Join our skin community',
+    icon: '✈️',
+    bg: 'rgba(0,136,204,0.15)',
     color: '#5bb8f5',
   },
 ]
@@ -53,7 +53,7 @@ export default async function HomePage() {
       {/* ── Hero ───────────────────────────────────────── */}
       <section
         className="px-8 pb-32 pt-28 text-center"
-        style={{ background: 'linear-gradient(180deg, var(--cream) 0%, var(--sage-light) 100%)',marginTop:"2vh" }}
+        style={{ background: 'linear-gradient(180deg, var(--cream) 0%, var(--sage-light) 100%)', marginTop: "2vh" }}
       >
         <div className="mx-auto" style={{ maxWidth: '700px' }}>
 
@@ -64,8 +64,8 @@ export default async function HomePage() {
               borderColor: 'rgba(61,107,79,0.25)',
               color: 'var(--sage)',
               boxShadow: '0 4px 14px rgba(0,0,0,0.05)',
-              padding:"5px",
-              marginTop:"1vh"
+              padding: "5px",
+              marginTop: "1vh"
             }}
           >
             Science-backed · Not sponsored opinions
@@ -73,19 +73,19 @@ export default async function HomePage() {
 
           <h1
             className="font-display animate-fade-up-2 mb-8 text-5xl font-light leading-tight"
-            style={{ color: 'var(--text-dark)', letterSpacing: '-1px',marginTop:"2vh",lineHeight:"1.2" }}
+            style={{ color: 'var(--text-dark)', letterSpacing: '-1px', marginTop: "2vh", lineHeight: "1.2" }}
           >
             Simple solutions for<br />
-            <em style={{ color: 'var(--sage)', fontStyle: 'italic',marginTop:"2vh" }}>real skin problems</em>
+            <em style={{ color: 'var(--sage)', fontStyle: 'italic', marginTop: "2vh" }}>real skin problems</em>
           </h1>
 
           <p
             className="animate-fade-up-3 mb-16 text-base leading-relaxed"
-            style={{ color: 'var(--text-mid)',marginTop:"2vh",lineHeight:"1.2" }}
+            style={{ color: 'var(--text-mid)', marginTop: "2vh", lineHeight: "1.2" }}
           >
             We read the science so you don&apos;t have to.<br />
             Every product recommended by{' '}
-            <strong style={{ color: 'var(--sage)',marginTop:"2vh",lineHeight:"1.2" }}>ingredient</strong>, not by brand deal.
+            <strong style={{ color: 'var(--sage)', marginTop: "2vh", lineHeight: "1.2" }}>ingredient</strong>, not by brand deal.
           </p>
 
           <div className="animate-fade-up-4 flex flex-wrap justify-center gap-4 mt-6 ">
@@ -95,11 +95,16 @@ export default async function HomePage() {
                 href={`#${p.slug}`}
                 className="flex items-center gap-3 rounded-full border px-6 py-3 text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-md"
                 style={{
-                  background:  'white',
-                  borderColor: 'rgba(0,0,0,0.1)',
-                  color:       'var(--text-dark)',
-                  boxShadow:   'var(--shadow-sm)',
-                  padding:"5px"
+                  background: 'rgba(20, 255, 120, 0.08)', // soft green tint
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                  border: '1px solid rgba(20,255,120,0.3)',
+                  boxShadow: `
+    0 0 10px rgba(20,255,120,0.4),
+    0 0 20px rgba(20,255,120,0.25),
+    0 0 40px rgba(20,255,120,0.15),
+  `
+                  , padding: "0.5rem"
                 }}
               >
                 <span className="text-base">{p.emoji}</span>
@@ -162,7 +167,7 @@ export default async function HomePage() {
                     background: 'white',
                     border: '1px solid rgba(0,0,0,0.07)',
                     boxShadow: 'var(--shadow-sm)',
-                    padding:"10px",
+                    padding: "10px",
                   }}
                 >
 
@@ -186,7 +191,7 @@ export default async function HomePage() {
                         <div className='p-[5vw]'>
                           <div className="flex items-center gap-3 mb-2">
                             <h3 className="font-display text-xl font-light">{problem.title}</h3>
-                            <span className="rounded-full px-3 py-1 ml-[1vw] text-xs font-medium" style={{ background: badge.bg, color: badge.color }}>
+                            <span className="rounded-full px-3 py-1 ml-[1vw] text-xs font-medium" style={{ background: badge.bg, color: badge.color, padding: "0.5rem" }}>
                               {problem.badge}
                             </span>
                           </div>
@@ -208,7 +213,7 @@ export default async function HomePage() {
                       <Link
                         href={`/${problem.slug}`}
                         className="relative no-underline rounded-full border px-6 py-2.5 text-sm font-medium transition-all hover:bg-(--sage) hover:text-white hover:border-(--sage) hover:shadow-md after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-linear-to-r after:from-(--sage) after:to-(--coral) after:transition-all hover:after:w-full"
-                        style={{ borderColor: 'var(--border)', color: 'var(--text-mid)', padding:"5px" }}
+                        style={{ borderColor: 'var(--border)', color: 'var(--text-mid)', padding: "5px" }}
                       >
                         View all →
                       </Link>
@@ -218,7 +223,7 @@ export default async function HomePage() {
 
                   {/* Products */}
                   {products.length > 0 && (
-                    <div className="px-10 py-9" style={{ background: 'var(--cream)',padding:"10px" }}>
+                    <div className="px-10 py-9" style={{ background: 'var(--cream)', padding: "10px" }}>
                       <div
                         className="grid"
                         style={{
@@ -243,12 +248,12 @@ export default async function HomePage() {
 
 
       {/* ── Social ───────────────────────────────────── */}
-      <section className="px-6 py-24" style={{ background: 'var(--text-dark)',color:"grey" }}>
-        <div className="mx-auto" style={{ maxWidth: '900px' }}>
+      <section className="px-6 py-24 " style={{ background: 'var(--text-dark)', color: "grey" }}>
+        <div className="mx-auto" style={{ maxWidth: '900px', padding: "2vw" }}>
 
-          <h2 className="text-white text-center text-3xl mb-14">Follow for daily tips</h2>
+          <h2 className="text-white text-center text-3xl mb-14" style={{ marginBottom: "1vw" }}>Follow for daily tips</h2>
 
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 ">
             {SOCIAL_LINKS.map(s => (
               <a
                 key={s.label}
@@ -259,12 +264,13 @@ export default async function HomePage() {
                 style={{
                   background: 'rgba(255,255,255,0.05)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  padding:"5px"
+                  padding: "5px",
+                  marginTop: "2vh"
                 }}
               >
                 <div
-                  className="flex items-center justify-center rounded-full text-2xl group-hover:scale-110"
-                  style={{ width: '60px', height: '60px', background: s.bg }}
+                  className="flex items-center justify-center rounded-full text-2xl group-hover:scale-110 "
+                  style={{ width: '60px', height: '60px', background: s.bg, }}
                 >
                   {s.icon}
                 </div>
