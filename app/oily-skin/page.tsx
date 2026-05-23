@@ -124,7 +124,7 @@ export default async function OilySkinPage() {
 
       {/* ── REDESIGNED NAVIGATION BUTTONS ── */}
       {PROBLEMS && PROBLEMS.length > 0 && (
-        <section className="py-32 border-t border-neutral-200/40 bg-white" style={{width:"100%", itemsCenter:"center", justifyContent:"center", display:"flex", flexDirection:"column"}}>
+        <section className="py-32 border-t border-neutral-200/40 bg-white" style={{width:"100%", alignItems:"center", justifyContent:"center", display:"flex", flexDirection:"column"}}>
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="font-display text-2xl font-light mb-16 text-[var(--text-dark)] tracking-wide">
               Explore Other Skin Concerns
