@@ -3,9 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, Dna, Sparkles, Droplet, AlertTriangle, ArrowRight } from "lucide-react";
+import { Product } from '@/types'
 
 // Animation Variants for Staggered Children
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -15,7 +16,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,

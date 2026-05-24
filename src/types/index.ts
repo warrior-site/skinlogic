@@ -1,5 +1,5 @@
 export interface Product {
-  variants:string
+  variants?: string
   _id?: string
   id: string
   problem: string
